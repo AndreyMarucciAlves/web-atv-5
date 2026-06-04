@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: #0263ff;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+            border-radius: 24px;
+        }
+        
+        form{
+            text-align: center;
+            border-radius: 24px;
+            padding: 0px;
+            margin: 0px;
+            border: 1px solid #1d5e75;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input{
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <form>
+            <h1>Cadastro</h1>
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="senha" id ="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" maxlength="16"><br><br>
+
+            <label for="nascimento" id="nascimento">Data de Nascimento:</label>
+            <input type="date" id="nascimento" name="nascimento"><br><br>
+
+            <label for="curso" id="curso">Curso:</label>
+            <input type="text" id="curso" name="curso"><br><br>
+
+            <label for="sexo" id="sexo">Sexo:</label>
+            <input type="text" id="sexo" name="sexo"><br><br>
+
+            <label for="interesses" id="interesses">Interesses:</label>
+            <input type="text" id="interesses" name="interesses"><br><br>
+
+            <label for="comentarios" id="comentarios">Comentários:</label>
+            <input type="text" id="comentarios" name="comentarios" placeholder="Comentários"><br><br>
+
+            <label for="upload de fotos" id="upload de fotos">Upload de Fotos:</label>
+            <input type="file" id="upload de fotos" name="upload de fotos"><br><br>
+        </form>
+    </div>
+</body>
+</html>
