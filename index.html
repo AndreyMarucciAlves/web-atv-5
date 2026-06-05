@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,42 +9,82 @@
         body {
             background-color: #0263ff;
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
         }
 
         .container {
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 20px;
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 10px;
             background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
             border-radius: 24px;
         }
         
-        form{
-            text-align: center;
-            border-radius: 24px;
-            padding: 0px;
-            margin: 3px solid #1d5e75;
+        form {
+            border-radius: 20px;
+            padding: 30px;
             border: 3px solid #1d5e75;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1d5e75;
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-size: 28px;
+        }
+
+        .campo-grupo {
+            display: flex;
+            flex-direction: column; 
+            margin-bottom: 18px;
         }
 
         label {
-            display: block;
-            margin-bottom: 5px;
             font-weight: bold;
-        }
-        
-        input{
-            border: 2px solid #1d5e75;
-            border-radius: 4px;
+            color: #1d5e75;
+            margin-bottom: 6px;
+            font-size: 14px;
         }
 
-        button{
-            margin: 15px;
-            width: 40%;
-            border-radius: 24px;
+        input {
+            width: 100%;
+            padding: 4px;
+            border: 2px solid #1d5e75;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: all 0.2s ease;
         }
-        button:hover{
+
+        input:focus {
+            border-color: #0263ff;
+            box-shadow: 0 0 8px rgba(2, 99, 255, 0.3);
+            outline: none;
+        }
+
+        .botao-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        button {
+            width: 50%;
+            padding: 12px;
+            border-radius: 24px;
+            border: 2px solid #1d5e75;
+            background-color: transparent;
+            color: #1d5e75;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;    
+        }
+
+        button:hover {
             background-color: #1d5e75;
             color: white;
         }
@@ -55,34 +95,60 @@
     <div class="container">
         <form>
             <h1>Cadastro</h1>
-            <label for="name">Nome:</label>
-            <input type="text" id="name" name="name"><br><br>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email"><br><br>
+            <div class="campo-grupo">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name">
+            </div>
 
-            <label for="senha" id ="senha">Senha:</label>
-            <input type="password" id="senha" name="senha" maxlength="16"><br><br>
+            <div class="campo-grupo">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            
+            <div class="campo-grupo">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" maxlength="16">
+            </div>
 
-            <label for="nascimento" id="nascimento">Data de Nascimento:</label>
-            <input type="date" id="nascimento" name="nascimento"><br><br>
+            <div class="campo-grupo">
+                <label for="confirmar-senha">Confirmar Senha:</label>
+                <input type="password" id="confirmar-senha" name="confirmar-senha" maxlength="16">
+            </div>
 
-            <label for="curso" id="curso">Curso:</label>
-            <input type="text" id="curso" name="curso"><br><br>
+            <div class="campo-grupo">
+                <label for="nascimento">Data de Nascimento:</label>
+                <input type="date" id="nascimento" name="nascimento">
+            </div>
 
-            <label for="sexo" id="sexo">Sexo:</label>
-            <input type="text" id="sexo" name="sexo"><br><br>
+            <div class="campo-grupo">
+                <label for="curso">Curso:</label>
+                <input type="text" id="curso" name="curso">
+            </div>
 
-            <label for="interesses" id="interesses">Interesses:</label>
-            <input type="text" id="interesses" name="interesses"><br><br>
+            <div class="campo-grupo">
+                <label for="sexo">Sexo:</label>
+                <input type="text" id="sexo" name="sexo">
+            </div>
 
-            <label for="comentarios" id="comentarios">Comentários:</label>
-            <input type="text" id="comentarios" name="comentarios" placeholder="Comentários"><br><br>
+            <div class="campo-grupo">
+                <label for="interesses">Interesses:</label>
+                <input type="text" id="interesses" name="interesses">
+            </div>
 
-            <label for="upload de fotos" id="upload de fotos">Upload de Fotos:</label>
-            <input type="file" id="upload de fotos" name="upload de fotos"><br><br>
+            <div class="campo-grupo">
+                <label for="comentarios">Comentários:</label>
+                <input type="text" id="comentarios" name="comentarios" placeholder="Digite seus comentários...">
+            </div>
 
-            <button type="submit">Enviar</button>
+            <div class="campo-grupo">
+                <label for="upload-fotos">Upload de Fotos:</label>
+                <input type="file" id="upload-fotos" name="upload-fotos">
+            </div>
+
+            <div class="botao-container">
+                <button type="submit">Enviar</button>
+            </div>
         </form>
     </div>
 </body>
